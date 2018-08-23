@@ -37,6 +37,19 @@ body {
     background-color: #03bc9e;
 }
 
+#extras {
+    background-color: #E51A2E;
+}
+
+#confirmacion {
+    height: 25%;
+    background-color: #fcc000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .sectionHeader {
     width: 30px;
     margin-left: 16px;
@@ -68,8 +81,6 @@ label>input[type="checkbox"] {
     -moz-appearance: none;
     display: inline-block;
     position: relative;
-    background-color: #E51A2E;
-    color: #fcc000;
     top: 10px;
     height: 50px;
     width: 50px;
@@ -88,12 +99,43 @@ label>input[type="checkbox"]:checked::before {
     transform: rotate(40deg);
 }
 
-label>input[type="checkbox"]:hover {
+#adicionalesContainer input[type="checkbox"] {
+    background-color: #E51A2E;
+    color: #fcc000;
+}
+
+#adicionalesContainer input[type="checkbox"]:hover {
     background-color: rgba(229, 26, 46, .7);
 }
 
-label>input[type="checkbox"]:checked {
+#adicionalesContainer input[type="checkbox"]:checked {
     background-color: #E51A2E;
+}
+
+#salsasContainer input[type="checkbox"] {
+    background-color: #fcc000;
+    color: #03bc9e;
+}
+
+#salsasContainer input[type="checkbox"]:hover {
+    background-color: rgba(252, 192, 0, .7);
+}
+
+#salsasContainer input[type="checkbox"]:checked {
+    background-color: #fcc000;
+}
+
+#extrasContainer input[type="checkbox"] {
+    background-color: #03bc9e;
+    color: #E51A2E;
+}
+
+#extrasContainer input[type="checkbox"]:hover {
+    background-color: rgba(3, 188, 158, .7);
+}
+
+#extrasContainer input[type="checkbox"]:checked {
+    background-color: #03bc9e;
 }
 
 #selectContainer {
@@ -118,49 +160,102 @@ label>input[type="checkbox"]:checked {
     border: none;
 }
 
-#tortillaSelect:focus {
+#tortillaSelect:focus,
+#submitBtn:focus {
     outline: 0;
 }
 
-#checkboxes {
+#adicionalesContainer,
+#ingredientesContainer,
+#salsasContainer,
+#extrasContainer {
     margin-left: 250px;
 }
 
-#checkboxes ul,
-#adicionales {
+.radioButtonList,
+.checkboxList {
     list-style-type: none;
     margin: 0;
     font-size: 20px;
     padding-left: 0;
 }
 
-#checkboxes li {
+.radioButtonList li {
     padding: 12px 0;
 }
 
 #adicionalesContainer label:hover,
-#checkboxes label:hover {
+.radioButtonList label:hover {
     cursor: pointer;
 }
 
-#checkboxes input {
+.radioButtonList input {
     margin-right: 12px;
-    /*-moz-appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid black;
-    display: inline-block;*/
 }
 
-#adicionalesContainer {
-    margin-left: 250px;
-}
-
-#adicionales {
+.checkboxList,
+#extrasContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#adicionales li {
+.checkboxList li {
     padding: 10px 16px;
+}
+
+#extrasContainer label {
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+
+#submitBtn {
+    padding: 15px 26px;
+    background-color: #E51A2E;
+    font-size: 24px;
+    text-decoration: none;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submitBtn:hover {
+    opacity: 0.7;
+}
+
+#nachos,
+#cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#nachos label:hover {
+    cursor: pointer;
+}
+
+#cantidad {
+    margin-left: 180px;
+}
+
+#cantidad>input {
+    background-color: #03bc9e;
+    padding: 16px 10px;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#cantidad>span {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+#cantidad>input:focus {
+    outline: none;
 }

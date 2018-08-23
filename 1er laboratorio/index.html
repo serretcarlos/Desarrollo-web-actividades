@@ -26,8 +26,8 @@
     <div id="principal" class="sectionDiv">
         <span class="number">2</span>
         <h1 class="sectionHeader">Elige el ingrediente principal</h1>
-        <div id="checkboxes">
-            <ul>
+        <div id="ingredientesContainer">
+            <ul class="radioButtonList">
                 <li>
                     <label>
                         <input type="radio" name="ingrediente">Carne asada</label>
@@ -51,7 +51,7 @@
         <span class="number">3</span>
         <h1 class="sectionHeader">Elige ingredientes adicionales </h1>
         <div id="adicionalesContainer">
-            <ul id="adicionales">
+            <ul class="checkboxList">
                 <li>
                     <label>
                         <input type="checkbox">Arroz blanco</label>
@@ -89,7 +89,51 @@
     </div>
     <div id="salsa" class="sectionDiv">
         <span class="number">4</span>
-        <h1 class="sectionHeader">Elige la salsa</h1>
+        <h1 class="sectionHeader">Elige la(s) salsa(s)</h1>
+        <div id="salsasContainer">
+            <ul class="checkboxList">
+                <li>
+                    <label>
+                        <input type="checkbox">Verde
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox">Roja
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox">De la casa
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox">Habanera
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="extras" class="sectionDiv">
+        <span class="number">5</span>
+        <h1 class="sectionHeader">
+            Opciones adicionales
+        </h1>
+        <div id="extrasContainer">
+            <div id="nachos">
+                <label>¿Nachos?
+                    <input type="checkbox">
+                </label>
+            </div>
+            <div id="cantidad">
+                <span>¿Cuántos burritos?</span>
+                <input type="text" value="1">
+            </div>
+        </div>
+    </div>
+    <div id="confirmacion">
+        <input id="submitBtn" type="submit" value="Realizar pedido">
     </div>
 
 </body>
