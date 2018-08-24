@@ -106,6 +106,10 @@ clear_button.addEventListener('click', function(){
     })
     resumen.style.maxHeight = null;
     document.getElementById('input_nachos').checked = false;
+    document.getElementById('cantidad_warning').classList.add('hidden');
+    document.getElementById('tortilla_warning').classList.add('hidden');
+    document.getElementById('ingrediente_warning').classList.add('hidden');
+
     document.getElementById('tortilla').scrollIntoView();
 
 })
