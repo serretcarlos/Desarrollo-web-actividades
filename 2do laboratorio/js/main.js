@@ -1,17 +1,14 @@
 let submit_btn = document.getElementById('submitBtn');
+let clear_button = document.getElementById('clearBtn');
 let ingredientes = document.getElementsByName('ingrediente')
 let adicionales = document.getElementsByName('adicional');
 let salsas = document.getElementsByName('salsa');
 var cantidad;
-
+var resumen = document.getElementById('resumen');
 let selectedIngredient = [];
 let selectedSalsas = [];
 let selectedAdicionales = [];
-var salsa_flag = false;
 var ingrediente_flag = false;
-var adicional_flag = false;
-var is_completed = true;
-
 var incrementScroll = function() {
     window.scrollBy(0, 120) ;
 }
@@ -20,16 +17,12 @@ var scrolling;
 
 
 submit_btn.addEventListener("click", function(event){
-    salsaflag = false;
-    ingrediente_flag = false;
-    adicional_flag = false;
-
     selectedIngredient = [];
     selectedSalsas = [];
     selectedAdicionales = [];
+    ingrediente_flag = false;
     cantidad = document.getElementById('input_cantidad').value;
     var is_valid_quantity = !isNaN(parseFloat(cantidad)) && isFinite(cantidad);
-    var resumen = document.getElementById('resumen');
     let tortilla = document.getElementById('tortillaSelect').value;
 
     ingredientes.forEach(function(element){
@@ -42,14 +35,12 @@ submit_btn.addEventListener("click", function(event){
     adicionales.forEach(function(element){
         if (element.checked){
             selectedAdicionales.push(element.value);
-            adicional_flag = true;
         }
     });
 
     salsas.forEach(function(element){
         if (element.checked){
             selectedSalsas.push(element.value);
-            salsa_flag = true;
         }
     })
 
@@ -98,7 +89,23 @@ submit_btn.addEventListener("click", function(event){
     resumen.style.maxHeight = '50vh';
     scrolling = setInterval(incrementScroll, 1);
     setTimeout(function(){ clearInterval(scrolling)}, 1000);
-    
-    
-
 });
+
+
+clear_button.addEventListener('click', function(){
+    document.getElementById('tortillaSelect').value = '0';
+    document.getElementById('input_cantidad').value = 1;
+    document.getElementsByName('ingrediente').forEach(function(element){
+        element.checked = false;
+    })
+    document.getElementsByName('adicional').forEach(function(element){
+        element.checked = false;
+    })
+    document.getElementsByName('salsa').forEach(function(element){
+        element.checked = false;
+    })
+    resumen.style.maxHeight = null;
+    document.getElementById('input_nachos').checked = false;
+    document.getElementById('tortilla').scrollIntoView();
+
+})
