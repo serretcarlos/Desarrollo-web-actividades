@@ -1,0 +1,306 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logoContainer {
+    height: 100%;
+    background-color: #fcc000;
+    background-image: url('../images/senor_burrito.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.sectionDiv {
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#tortilla {
+    background-color: #03bc9e;
+}
+
+#principal {
+    background-color: #E51A2E;
+}
+
+#ingredientes {
+    background-color: #fcc000;
+}
+
+#salsa {
+    background-color: #03bc9e;
+}
+
+#extras {
+    background-color: #E51A2E;
+}
+
+#confirmacion {
+    height: 25%;
+    background-color: #fcc000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resumen {
+    background-color: #03bc9e;
+}
+
+.sectionHeader {
+    width: 30px;
+    margin-left: 16px;
+    float: left;
+}
+
+.headerContainer {
+    float: left;
+    height: 50vh;
+    margin-left: 16px;
+}
+
+.number {
+    float: left;
+    font-weight: 700;
+    font-size: 40vh;
+    display: inline-flex;
+    align-items: center;
+    line-height: 50vh;
+    padding-left: 32px;
+}
+
+.container {
+    float: left;
+}
+
+label>input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+
+label>input[type="checkbox"]:checked::before {
+    position: absolute;
+    left: 15px;
+    font: 35px Arial, sans-serif;
+    top: 6px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+
+#adicionalesContainer input[type="checkbox"] {
+    background-color: #E51A2E;
+    color: #fcc000;
+}
+
+#adicionalesContainer input[type="checkbox"]:hover {
+    background-color: rgba(229, 26, 46, .7);
+}
+
+#adicionalesContainer input[type="checkbox"]:checked {
+    background-color: #E51A2E;
+}
+
+#salsasContainer input[type="checkbox"] {
+    background-color: #fcc000;
+    color: #03bc9e;
+}
+
+#salsasContainer input[type="checkbox"]:hover {
+    background-color: rgba(252, 192, 0, .7);
+}
+
+#salsasContainer input[type="checkbox"]:checked {
+    background-color: #fcc000;
+}
+
+#extrasContainer input[type="checkbox"] {
+    background-color: #03bc9e;
+    color: #E51A2E;
+}
+
+#extrasContainer input[type="checkbox"]:hover {
+    background-color: rgba(3, 188, 158, .7);
+}
+
+#extrasContainer input[type="checkbox"]:checked {
+    background-color: #03bc9e;
+}
+
+#selectContainer {
+    border: 2px solid black;
+    padding-right: 12px;
+    min-width: 250px;
+    background-color: #fcc000;
+}
+
+#wrapper {
+    float: left;
+    margin-left: 250px;
+}
+
+#tortillaSelect {
+    width: 100%;
+    padding: 16px 10px;
+    font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../images/sort-down.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+#tortillaSelect:focus,
+#submitBtn:focus {
+    outline: 0;
+}
+
+#adicionalesContainer,
+#ingredientesContainer,
+#salsasContainer,
+#extrasContainer {
+    margin-left: 250px;
+}
+
+.radioButtonList,
+.checkboxList {
+    list-style-type: none;
+    margin: 0;
+    font-size: 20px;
+    padding-left: 0;
+}
+
+.radioButtonList li {
+    padding: 12px 0;
+}
+
+#adicionalesContainer label:hover,
+.radioButtonList label:hover {
+    cursor: pointer;
+}
+
+.radioButtonList input {
+    margin-right: 12px;
+}
+
+.checkboxList,
+#extrasContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.checkboxList li {
+    padding: 10px 16px;
+}
+
+#extrasContainer label {
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+}
+
+#submitBtn {
+    padding: 15px 26px;
+    background-color: #E51A2E;
+    font-size: 24px;
+    text-decoration: none;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submitBtn:hover {
+    opacity: 0.7;
+}
+
+#nachos,
+#cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#nachos label:hover {
+    cursor: pointer;
+}
+
+#cantidad {
+    margin-left: 180px;
+}
+
+#cantidad>input {
+    background-color: #03bc9e;
+    padding: 16px 10px;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#cantidad>span {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+#cantidad>input:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#resumen_info {
+    height: 100%;
+    margin-left: 220px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center
+}
+
+.info_container>label {
+    font-size: 1.3em;
+}
+
+.info_container>label:first-child {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.info_container {
+    margin: 12px 0;
+}
+
+#resumen {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+}
