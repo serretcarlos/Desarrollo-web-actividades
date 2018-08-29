@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ordenar</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="nav_wrapper">
+        <img src="images/senor_burrito.jpg" alt="" height="55" width="55">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Inicio</a>
+                </li>
+                <li>
+                    <a href="#"> Ordenar </a>
+                </li>
+                <li>
+                    <a href="comentarios.html"> Comentarios</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="tortilla" class="sectionDiv">
+        <span class="number">1</span>
+        <h1 class="sectionHeader">Elige tu tortilla</h1>
+        <div id="wrapper">
+            <div id="selectContainer">
+                <select id="tortillaSelect">
+                    <option value="0">Elige una opción</option>
+                    <option value="Tortilla normal">Tortilla normal</option>
+                    <option value="Tortilla integral">Tortilla integral</option>
+                    <option value="Bowl">Bowl</option>
+                </select>
+            </div>
+            <span id="tortilla_warning" class="message hidden">Necesita seleccionar el tipo de tortilla</span>
+        </div>
+    </div>
+    <div id="principal" class="sectionDiv">
+        <span class="number">2</span>
+        <h1 class="sectionHeader">Elige el ingrediente principal</h1>
+        <div id="ingredientesContainer">
+            <ul class="radioButtonList">
+                <li>
+                    <label>
+                        <input type="radio" name="ingrediente" value="Carne asada">Carne asada</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="ingrediente" value="Trompo">Trompo</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="ingrediente" value="Pollo">Pollo</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="ingrediente" value="Nopalitos">Nopalitos</label>
+                </li>
+            </ul>
+            <span id="ingrediente_warning" class="message hidden">Necesita seleccionar un ingrediente principal</span>
+        </div>
+    </div>
+    <div id="ingredientes" class="sectionDiv">
+        <span class="number">3</span>
+        <h1 class="sectionHeader">Elige ingredientes adicionales </h1>
+        <div id="adicionalesContainer">
+            <ul class="checkboxList">
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Arroz blanco">Arroz blanco</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Queso">Queso</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Frijoles">Frijoles</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Crema">Crema</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Lechuga">Lechuga</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Pico de gallo">Pico de gallo</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Guacamole">Guacamole</label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="adicional" value="Jalapeños">Jalapeños</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="salsa" class="sectionDiv">
+        <span class="number">4</span>
+        <h1 class="sectionHeader">Elige la(s) salsa(s)</h1>
+        <div id="salsasContainer">
+            <ul class="checkboxList">
+                <li>
+                    <label>
+                        <input type="checkbox" name="salsa" value="Verde">Verde
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="salsa" value="Roja">Roja
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="salsa" value="De la casa">De la casa
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="salsa" value="Habanera">Habanera
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="extras" class="sectionDiv">
+        <span class="number">5</span>
+        <h1 class="sectionHeader">
+            Opciones adicionales
+        </h1>
+        <div id="extrasContainer">
+            <div id="nachos">
+                <label>¿Nachos?
+                    <input id="input_nachos" type="checkbox">
+                </label>
+            </div>
+            <div id="cantidad">
+                <span>¿Cuántos burritos?</span>
+                <input id="input_cantidad" type="text" value="1">
+                <span id="cantidad_warning" class="message hidden">Necesita introducir una cantidad válida</span>
+            </div>
+        </div>
+    </div>
+    <div id="confirmacion">
+        <input id="submitBtn" type="submit" value="Realizar pedido">
+        <input id="clearBtn" type="submit" value="Reiniciar pedido">
+    </div>
+    <div id="resumen" class="sectionDiv hidden_info hidden">
+        <h1 class="sectionHeader">
+            Resumen
+        </h1>
+        <div id="resumen_info">
+            <div class="info_container">
+                <label>Tortilla:</label>
+                <label id="tortilla_info"></label>
+            </div>
+            <div class="info_container">
+                <label>Ingrediente principal:</label>
+                <label id="principal_info"></label>
+            </div>
+            <div class="info_container">
+                <label>Adicionales:</label>
+                <label id="adicionales_info"></label>
+            </div>
+            <div class="info_container">
+                <label>Salsas:</label>
+                <label id="salsas_info"></label>
+            </div>
+            <div class="info_container">
+                <label>Nachos:</label>
+                <label id="nachos_info"></label>
+            </div>
+            <div class="info_container">
+                <label>Cantidad:</label>
+                <label id="cantidad_info"></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
