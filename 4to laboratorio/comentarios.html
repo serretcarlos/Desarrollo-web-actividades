@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comentarios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="nav_wrapper">
+        <img src="images/senor_burrito.jpg" alt="" height="55" width="55">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Inicio</a>
+                </li>
+                <li>
+                    <a href="orden.html"> Ordenar </a>
+                </li>
+                <li>
+                    <a href="#"> Comentarios</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="comentarios">
+        <div class="inner_comment">
+            <input id="correo_input" type="email" placeholder="Correo">
+            <span id="correo_warning" class="hidden">Ingrese una dirección de correo válida</span>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Aquí su comentario"></textarea>
+            <span id="comment_warning" class="hidden">Ingrese un mensaje válido</span>
+            <input type="submit" id="sendBtn" value="Enviar comentario">
+            <span id="comment"></span>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
