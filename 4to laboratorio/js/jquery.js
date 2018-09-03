@@ -26,20 +26,22 @@
     }
 
     var getComments = function(){
-        /*$.ajax({
-            url: '../assets/comments.xml',
+        $.ajax({
+            url: 'https://raw.githubusercontent.com/serretcarlos/Desarrollo-web-actividades/master/4to%20laboratorio/assets/comments.xml',
             type: 'GET',
             dataType: 'xml',
             success: function(data){
-                console.log(data);
+                $(data).find('comment').each(function(){
+                    var name = $(this).find('name').text();
+                    var email = $(this).find('name').attr('email');
+                    var comment = $(this).find('text').text();
+                    $('#comments tbody').append(`<tr><td>${name}</td><td>${email}</td><td>${comment}</td> </tr>`)
+                })
             },
             error: function(errorMsg){
 
             }
-        });*/
-        $.get('../assets/comments.xml', function(data){
-            console.log(data);
-        }, 'html');
+        });
     }
 
     $(function(){

@@ -353,7 +353,7 @@ nav ul>li a:hover {
 }
 
 #comentarios {
-    height: calc(100% - 70px);
+    min-height: calc(100% - 70px);
     background-color: #03bc9e;
     display: flex;
     justify-content: center;
@@ -370,10 +370,18 @@ nav ul>li a:hover {
     min-width: 100%;
     border: 2px solid black;
     border-collapse: collapse;
+    margin-top: 32px;
+}
+
+#comments td,
+th {
+    border: 2px solid black;
+    padding: 6px;
 }
 
 #comment_warning,
-#correo_warning {
+#correo_warning,
+#user_warning {
     width: 100%;
     font-weight: 600;
 }

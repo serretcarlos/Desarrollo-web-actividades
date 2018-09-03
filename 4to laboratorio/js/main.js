@@ -3,8 +3,13 @@ $(document).ready(function(){
     var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 
     $('#sendBtn').click(function(){
+        let $name = $('#username').val();
         let $email = $('#correo_input').val();
         let $comment = $('#message').val();
+        if (!$name){
+            $('#user_warning').show();
+            return;
+        }
         if(!pattern.test($email))
         {
             $('#correo_warning').show();
@@ -15,8 +20,10 @@ $(document).ready(function(){
             $('#comment_warning').show();
             return;
         }
+        $('#comments tbody').append(`<tr><td>${$name}</td><td>${$email}</td><td>${$comment}</td> </tr>`)
+        $('#correo_warning').hide();
         $('#comment_warning').hide();
-        $('#comment').html($comment);
+        $('#user_warning').hide();
     });
 
 
