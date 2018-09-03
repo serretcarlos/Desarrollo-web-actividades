@@ -1,0 +1,88 @@
+{
+  "menu": {
+    "tipo_burrito": [
+      {
+        "type": "Tortilla Harina",
+        "value": "tortilla_harina"
+      },
+      {
+        "type": "Tortilla Integral",
+        "value": "tortilla_integral"
+      },
+      {
+        "type": "Bowl",
+        "value": "bowl"
+      }
+    ],
+    "ingrediente": [
+      {
+        "type": "Carne Asada",
+        "value": "carne_asada"
+      },
+      {
+        "type": "Trompo",
+        "value": "trompo"
+      },
+      {
+        "type": "Pollo",
+        "value": "pollo"
+      },
+      {
+        "type": "Nopalitos (veggie)",
+        "value": "nopalitos"
+      }
+    ],
+    "toppings": [
+      {
+        "topping": "Arroz Blanco",
+        "value": "arroz_blanco"
+      },
+      {
+        "topping": "Queso",
+        "value": "queso"
+      },
+      {
+        "topping": "Frijolitos",
+        "value": "frijolitos"
+      },
+      {
+        "topping": "Crema",
+        "value": "crema"
+      },
+      {
+        "topping": "Lechuga",
+        "value": "Lechuga"
+      },
+      {
+        "topping": "Pico de Gallo",
+        "value": "pico_de_gallo"
+      },
+      {
+        "topping": "Guacamole",
+        "value": "guacamole"
+      },
+      {
+        "topping": "Jalape&ntilde;os",
+        "value": "jalapenos"
+      }
+    ],
+    "salsas": [
+      {
+        "salsa": "Verde",
+        "value": "verde"
+      },
+      {
+        "salsa": "Roja",
+        "value": "roja"
+      },
+      {
+        "salsa": "de la Casa",
+        "value": "de_la_casa"
+      },
+      {
+        "salsa": "Habanera",
+        "value": "habanera"
+      }
+    ]
+  }
+}
